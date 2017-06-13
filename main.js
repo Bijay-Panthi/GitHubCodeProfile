@@ -6,7 +6,7 @@ var margin = { top: 20, right: 20, bottom: 30, left: 50 },
 
 // Create a SVG Canvas
 
-var gitHubRepo = "https://api.github.com/users/" + username + "/repos";
+var gitHubRepo = "https://api.github.com/users/Bijay-Panthi";
 
 var svg = d3
   .select("body")
@@ -17,3 +17,10 @@ var svg = d3
   .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
 // Getting Data from the Api
+d3.json(gitHubRepo, function(error, data) {
+  if (error) throw error;
+  console.log(data);
+  console.log(data.repos_url);
+
+  // format the data
+});
