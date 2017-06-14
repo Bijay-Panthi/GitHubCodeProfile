@@ -7,15 +7,25 @@ var createChart = function(userData) {
     height = 700 - margin.top - margin.bottom;
 
   // Create a SVG Canvas
+  // var svg = d3
+  //   .select("body")
+  //   .append("svg")
+  //   .attr("width", width + margin.left + margin.right)
+  //   .attr("height", height + margin.top + margin.bottom)
+  //   .style("background-color", "red")
+  //   .append("g")
+  //   .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+  var diameter = 960,
+    format = d3.format(",d"),
+    color = d3.scaleOrdinal(d3.schemeCategory20c);
+
   var svg = d3
     .select("body")
     .append("svg")
-    .attr("width", width + margin.left + margin.right)
-    .attr("height", height + margin.top + margin.bottom)
-    .style("background-color", "red")
-    .append("g")
-    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
-
+    .attr("width", diameter)
+    .attr("height", diameter)
+    .attr("class", "bubble");
   // debugger;
   console.log(userData);
 
