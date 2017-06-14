@@ -15,6 +15,21 @@ var createChart = function(userData) {
     .style("background-color", "red")
     .append("g")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+  // debugger;
+  console.log(userData);
+
+  //Working with data
+  // d3.json(userData, function(data) {
+  //   console.log(data);
+
+  // if (error) throw error;
+  //   data.forEach(function(d) {
+  //     console.log(d);
+  // d.date = parseTime(d.date);
+  // d.close = +d.close;
+  //});
+  //}); // End d3
 }; // end createChart
 
 // console.log("loaded");
@@ -27,13 +42,6 @@ var createChart = function(userData) {
 
 //
 // // Getting Data from the Api
-// d3.json(gitHubRepo, function(error, data) {
-//   if (error) throw error;
-//   console.log(data);
-//   console.log(data.repos_url);
-//
-//   // format the data
-//});
 
 //
 
@@ -123,21 +131,22 @@ $(function() {
   }); // end click event handler
 
   function requestJSON(url, callback) {
-    $.ajax({
-      url: url,
-      dataType: "json",
-      async: true,
-      complete: function(data) {
-        // console.log(data);
-        // // console.log(callback);
-        callback.call(null, data.responseJSON);
-        //
-        // var postData = data;
-        // // console.log(postData);
-        createChart(data.responseJSON);
-
-        // console.log(data);
-      }
-    });
+    d3.json(url, createChart);
+    // $.ajax({
+    //   url: url,
+    //   dataType: "json",
+    //   async: true,
+    //   complete: function(data) {
+    //     // console.log(data);
+    //     // // console.log(callback);
+    //     callback.call(null, data.responseJSON);
+    //     //
+    //     // var postData = data;
+    //     // // console.log(postData);
+    //     createChart(data.responseJSON);
+    //
+    //     // console.log(data);
+    //   }
+    // });
   }
 });
