@@ -37,6 +37,15 @@ $.getJSON(url).done(function(data) {
   $("#created").text("Date  Created: " + data.created_at);
   $("#lastupdated").text("Last Updated: " + data.updated_at);
   $("#size").text("Size : " + data.size);
+  $("#stars").text("Stars: " + data.stargazers_count);
+  $("#forks").text("Forks: " + data.forks);
+  $("#openIssues").text("Open Issues: " + data.open_issues);
+  $("#subscribers").text("Subscribers: " + data.subscribers_count);
+
+  // <p id="stars">Loading...</p>
+  // <p id="forks">Loading...</p>
+  // <p id="openIssues">Loading...</p>
+  // <p id="subscribers">Loading...</p>
 });
 
 var margin = { top: 20, right: 20, bottom: 20, left: 20 },
