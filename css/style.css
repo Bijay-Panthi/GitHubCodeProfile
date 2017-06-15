@@ -1,9 +1,65 @@
 body {
   background-color: mistyrose;
+  margin: 0;
+  font-family: monospace;
 }
 
-.line {
-fill: red;
-stroke: steelblue;
-stroke-width: 20px;
+nav {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  height: 80px;
+  color: ghostwhite;
+  background: lightslategray;
+}
+
+h1 {
+  margin: 0;
+  line-height: 80px;
+  margin-left: 30px;
+  font-size: 40px;
+}
+
+form {
+  position: absolute;
+  right: 30px;
+  top: 20px;
+}
+
+input {
+  height: 30px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+
+div.container {
+  height: calc(100vh - 80px);
+  margin-top: 80px;
+  width: 100vw;
+  background: white;
+}
+
+.profileDetails {
+  border-right: 1px dashed black;
+}
+
+.profileDetails img {
+  width: 40%;
+  min-width: 200px;
+}
+
+.bubbleChart {
+  border-left: 1px dashed black;
+}
+
+.profileDetails, .bubbleChart {
+  position: relative;
+  padding: 30px 30px;
+  width: 50%;
+  height: 100%;
+  float: left;
+  box-sizing: border-box;
 }
