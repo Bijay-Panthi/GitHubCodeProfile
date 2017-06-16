@@ -115,6 +115,7 @@ var createChart = function(error, data) {
 $(function() {
   $("form").on("submit", function(e) {
     e.preventDefault();
+
     // $("#gitHubData").html(
     //   '<div id="loader"><img src="https://i.imgur.com/UqLN6nl.gif" alt="loading..."></div>'
     // );
@@ -128,6 +129,9 @@ $(function() {
     });
 
     $.getJSON(requestUrl).done(function(data) {
+      // debugger;
+      $("#textAndImage p").html("");
+      $("#text").css("display", "none");
       $("#profile").attr("src", data.avatar_url);
       $("#username").text("Username: " + data.login);
       $("#company").text("Company: " + (data.company || "Unknown"));

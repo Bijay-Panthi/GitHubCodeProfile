@@ -5,6 +5,16 @@ body {
   overflow: hidden;
 }
 
+#textAndImage{
+  text-align: center;
+}
+
+#text {
+  font-size: 30px;
+  text-align: center;
+  text-shadow: 1px 3px 0px rgba(0,0,0,0.2);
+}
+
 .container > div {
   overflow: auto;
 }
@@ -54,6 +64,8 @@ div.container {
 .profileDetails img {
   width: 40%;
   min-width: 200px;
+  margin: 0px auto;
+  /*border-radius: 75px;*/
 }
 
 .bubbleChart {
