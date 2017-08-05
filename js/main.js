@@ -88,7 +88,7 @@ var createChart = function(error, data) {
       return color(d.data.name);
     })
     .on("click", function(d) {
-      window.location.replace("/repositories.html#" + d.data.full_name);
+      window.location.replace("repositories.html#" + d.data.full_name);
     })
     .on("mouseover", function(d) {
       tooltip.text(d.data.name + ": " + format(d.value));
